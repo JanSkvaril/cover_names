@@ -31,7 +31,7 @@ function createBoard() {
     }
     let pass = true;
 
-    fillBoardWith(b, "blue", 8);
+    fillBoardWith(b, "blue", 9);
     fillBoardWith(b, "red", 8);
     fillBoardWith(b, "black", 1);
     //b = fillBoardWith(b, "red", 9);
