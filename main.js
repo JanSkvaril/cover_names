@@ -11,9 +11,11 @@ $(() => {
 
 function changeColor(object) {
 
-    if (object.style.backgroundColor == "red") {
-        object.style.backgroundColor = "blue";
-    } else if (object.style.backgroundColor == "blue") {
-        object.style.backgroundColor = "white";
-    } else object.style.backgroundColor = "red";
+    if (object.classList == "red") {
+        object.classList = "blue";
+    } else if (object.classList == "blue") {
+        object.classList = "white";
+    } else object.classList = "red";
+
+
 }

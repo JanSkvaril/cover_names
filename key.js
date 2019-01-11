@@ -62,7 +62,7 @@ function GenerateTable() {
     for (let i = 0; i < 5; i++) {
         table += "<tr>";
         for (let y = 0; y < 5; y++) {
-            table += '<td style="background-color:' + board[i][y] + '">';
+            table += '<td class="' + board[i][y] + '">';
             table += "</td>"
 
         }

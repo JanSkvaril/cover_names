@@ -1,0 +1,52 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #263238;
+}
+
+#tableHolder {
+    height: 100%;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+}
+
+td {
+
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    text-align: center;
+    background-color: #757575;
+    font-size: 40px;
+    -webkit-user-select: none;
+    /* webkit (safari, chrome) browsers */
+    -moz-user-select: none;
+    /* mozilla browsers */
+    -khtml-user-select: none;
+    /* webkit (konqueror) browsers */
+    -ms-user-select: none;
+    /* IE10+ */
+}
+
+
+
+.red {
+    background-color: #FF5252;
+}
+
+.blue {
+    background-color: #00BCD4;
+}
+
+.white {
+    background-color: #757575;
+}
+
+.black {
+    background-color: #212121;
+}
