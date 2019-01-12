@@ -6,12 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{
+font-family: 'Roboto', sans-serif;
+    }
+</style>
 </head>
 
 <body>
+
     <form action="key.html" method="GET">
-        klíč: <input type="number" name="key" placeholder="sem napiš klíč">
+        klíč: <input type="number" name="key" placeholder="sem napiš klíč" required> <br>
+        klíč stolu: <input type="number" name="bkey" placeholder="sem napiš číslo stolu" required>
+
         <input type="submit">
     </form>
 

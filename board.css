@@ -5,7 +5,8 @@ body {
 }
 
 body {
-    background-color: #263238;
+    background-color: #263238c4;
+    font-family: 'Roboto', sans-serif;
 }
 
 #tableHolder {
@@ -48,5 +49,40 @@ td {
 }
 
 .black {
-    background-color: #212121;
+    background-color: #3a3a3a;
+}
+
+.purple {
+    background-color: #E040FB;
+}
+
+#tableKey {
+    background-color: #263238c4;
+    padding: 10px;
+
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#backButton {
+    background-color: #263238c4;
+    position: absolute;
+
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#backButton a {
+    color: white;
+    text-decoration: none;
+}
+
+#backButton a:hover {
+    text-decoration: underline;
 }

@@ -9,11 +9,12 @@ function GetURLParameter(sParam) {
     for (var i = 0; i < sURLVariables.length; i++) {
         var sParameterName = sURLVariables[i].split('=');
         if (sParameterName[0] == sParam) {
-            seed = parseInt(sParameterName[1]);
-            return sParameterName[1];
+            return parseInt(sParameterName[1]);
 
         }
     }
+
+    return parseInt(Math.random() * 10000);
 }
 
 let colors = [9, 8, 1];
@@ -56,13 +57,13 @@ function fillBoardWith(board, color, times) {
 }
 
 function GenerateTable() {
-    GetURLParameter("key");
     let board = createBoard();
     let table = "<table>";
     for (let i = 0; i < 5; i++) {
         table += "<tr>";
         for (let y = 0; y < 5; y++) {
             table += '<td class="' + board[i][y] + '">';
+            table += gen.GetRandom();
             table += "</td>"
 
         }
@@ -71,5 +72,14 @@ function GenerateTable() {
     table += "</table>";
     return table;
 }
+let gen = new Generator();
+$(() => {
+    $.get("krycijmena.txt", (data) => {
+        gen.LoadArray(data);
+        seed = GetURLParameter("key");
+        gen.seed = GetURLParameter("bkey");
+        document.getElementById("tableHolder").innerHTML = GenerateTable();
+    });
 
-document.getElementById("tableHolder").innerHTML = GenerateTable();
+    console.log("done");
+})

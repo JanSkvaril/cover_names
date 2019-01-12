@@ -3,8 +3,10 @@ class Generator {
         this.words = txt.split("\n");
         this.used = [];
         console.log(this.words);
+        this.seed = 1;
     }
-    GenerateTable() {
+    GenerateTable(seed) {
+        this.seed = seed;
         let table = "<table>";
         for (let i = 0; i < 5; i++) {
             table += "<tr>";
@@ -24,7 +26,7 @@ class Generator {
         let num;
         do {
             pass = true;
-            num = Math.round(Math.random() * (this.words.length - 1));
+            num = Math.round(random(this.seed++) * (this.words.length - 1));
             for (let i = 0; i < this.used.length; i++) {
                 if (this.used[i] == num) {
                     pass = false;
@@ -34,4 +36,9 @@ class Generator {
         this.used.push(num);
         return this.words[num];
     }
+}
+
+function random(seed) {
+    var x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
 }
